@@ -1,0 +1,16 @@
+---
+meta:
+  environment: jvm
+  toolchain:
+    name: maven
+    version: 17
+build:
+  image: null
+  args: package
+  artifacts:
+    target/*.jar: /
+run:
+  persistenceMount: /data
+  image: null
+  jarName: mediadrom-0.0.1-SNAPSHOT.jar
+  containerPort: 8080
